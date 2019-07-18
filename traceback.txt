@@ -1,26 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 248, in script
-    $ q5_tries += 1
-  File "game/script.rpy", line 248, in <module>
-    $ q5_tries += 1
-NameError: name 'q5_tries' is not defined
+  File "game/script.rpy", line 294, in script
+    if not q5_tried:
+  File "game/script.rpy", line 294, in <module>
+    if not q5_tried:
+NameError: name 'q5_tried' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 248, in script
-    $ q5_tries += 1
-  File "C:\Users\Heidi Chan\Documents\renpy-7.3.2-sdk\renpy\ast.py", line 912, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Heidi Chan\Documents\renpy-7.3.2-sdk\renpy\python.py", line 2004, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "game/script.rpy", line 248, in <module>
-    $ q5_tries += 1
-NameError: name 'q5_tries' is not defined
+  File "game/script.rpy", line 294, in script
+    if not q5_tried:
+  File "C:\Users\Heidi Chan\Documents\renpy-7.3.2-sdk\renpy\ast.py", line 1830, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\Heidi Chan\Documents\renpy-7.3.2-sdk\renpy\python.py", line 2035, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Heidi Chan\Documents\renpy-7.3.2-sdk\renpy\python.py", line 2028, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 294, in <module>
+    if not q5_tried:
+NameError: name 'q5_tried' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 7.3.2.320
 Babs Project 1.0
-Thu Jul 18 21:22:59 2019
+Thu Jul 18 21:39:55 2019

@@ -24,8 +24,10 @@ define g = Character("GF Receptors", who_color="#874caa")
 
 
 label start:
+
+
     $ points = 0
-    $ totalqs = 6
+    $ totalqs = 5
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
@@ -205,10 +207,11 @@ label scene3:
 
 label q3:
     menu:
-        "Which of the following is true? Growth factor receptors..." 
+        "Which of the following is true? Growth factor receptors..."
         "Are a transcription factor for S phase genes":
-            jump q3_incorrect
             $ q3_tried = True
+            jump q3_incorrect
+
 
         "Begin a signal cascade":
             if not q3_tried:
@@ -218,8 +221,9 @@ label q3:
             jump q3_correct
 
         "Bind with CDK complexes":
-            jump q3_incorrect
             $ q3_tried = True
+            jump q3_incorrect
+
 
 label q3_correct:
     "Correct! Growth factor receptors are the first step of the signalling cascade."
@@ -262,7 +266,67 @@ label q4_answer:
     jump gfr
 
 label gfr:
-    g "Something strange has been going on."
+    g "Something strange has been going on. It's one of our colleagues we work closely with."
+    g "Usually he's just sitting around not doing much, until we send him the signal when we receive our growth factor and send some signals into the cell."
+    g "This eventually switches him on, and starts sending the signals himself. It's like that GTP drives him crazy or something."
+    g "But recently, he's just always activated! Even when we don't have our growth factor with us. He never even takes a break anymore!"
 
+
+label q5:
+    "That was a strange occurrence indeed. Based off what you have learnt, which proto-oncogene do you think ha mutated?"
+    $ q5_tried = False
+
+label q5menu:
+    hide gfr
+    show ras:
+        xalign 0.2
+        yalign 0.2
+
+    show her2:
+        xalign 0.5
+        yalign 0.2
+
+    show myc:
+        xalign 0.85
+        yalign 0.2
+
+    menu:
+        "Which proto-oncogene has mutated?"
+
+        "Ras":
+            if not q5_tried:
+                $ points += 1
+                show points_text "Points: [points] / [totalqs]"
+            jump q5_correct
+        "HER2":
+            $ q5_tried = True
+            jump q5_incorrect
+        "Myc":
+            $ q5_tried = True
+            jump q5_incorrect
+
+label q5_correct:
+    "Correct! Ras gene has mutated...  "
+    jump scene4
+
+label q5_incorrect:
+    "Incorrect. Try again."
+    jump q5menu
+
+label scene4:
+    hide ras
+    hide her2
+    hide myc
+    "This was terrible. What could you do to fight back?"
+
+    if points > 3:
+        "You have enough points. Proceed to chapter 2?"
+    else:
+        "You need at least 3 points to progress the story. Retry chapter?"
+
+    menu:
+        "Get at least 3 points to progress!"
+        "Retry":
+            jump start
 
     return
