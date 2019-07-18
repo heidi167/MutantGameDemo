@@ -6,7 +6,7 @@
 #Images
 image back = "back.png"
 image fam_happy = im.FactorScale("fam_happy2.png", 0.5)
-image sun = im.FactorScale("sun.png", 0.5)
+image sun = im.FactorScale("sun.png", 0.05)
 image fam_mutate = im.FactorScale("fam_mutate.png", 0.5)
 image cells_mutate = im.FactorScale("cells_mutating.png", 0.4)
 image gfr = im.FactorScale("gfr.png", 0.5)
@@ -15,7 +15,7 @@ image ras = im.FactorScale("ras.png", 0.5)
 image her2 = im.FactorScale("her2_label.png", 0.4)
 image myc = im.FactorScale("myc.png", 0.5)
 image points_text = ParameterizedText(xalign=0.98, yalign=0.02, line_spacing=1)
-
+image chapter_text = ParameterizedText(xalign=0.06, yalign=0.02)
 #Characters
 define g = Character("GF Receptors", who_color="#874caa")
 
@@ -25,6 +25,12 @@ define g = Character("GF Receptors", who_color="#874caa")
 
 label start:
 
+label ch1screen:
+    scene back
+    show text "{size=+10} Chapter 1: The Mutation {/size}" at truecenter with dissolve
+    pause 2
+    hide text with dissolve
+    hide fam_mutate with dissolve
 
     $ points = 0
     $ totalqs = 5
@@ -33,8 +39,10 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene back
-
+    show sun:
+        xalign 0.01
+        yalign 0.01
+    show chapter_text "Chapter 1"
     show star:
         xalign 0.83
         yalign 0.0
@@ -319,14 +327,23 @@ label scene4:
     hide myc
     "This was terrible. What could you do to fight back?"
 
-    if points > 3:
+    if points >= 3:
         "You have enough points. Proceed to chapter 2?"
+        menu:
+            "Go to chapter 2":
+                jump chapter2
+            "I want to replay chapter 1":
+                jump start
     else:
         "You need at least 3 points to progress the story. Retry chapter?"
 
-    menu:
-        "Get at least 3 points to progress!"
-        "Retry":
-            jump start
+        menu:
+            "Get at least 3 points to progress!"
+            "Retry":
+                jump start
+
+label chapter2:
+    "sigh I have not done chapter 2 yet"
+    ":("
 
     return

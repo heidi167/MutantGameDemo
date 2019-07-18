@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 317: expected 'image_name_component' not found.
-    hide scene with fade
-        ^
+File "game/script.rpy", line 334: end of line expected.
+    jump chapter 2
+                 ^
 
 Ren'Py Version: Ren'Py 7.3.2.320
-Thu Jul 18 21:43:02 2019
+Thu Jul 18 22:06:19 2019
