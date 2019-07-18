@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 19: unexpected EOF while parsing
+    "pencil.png", 0.8)
+                      ^
+
+Ren'Py Version: Ren'Py 7.3.2.320
+Fri Jul 19 00:02:22 2019

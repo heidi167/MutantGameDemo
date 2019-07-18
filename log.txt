@@ -1,35 +1,36 @@
-Thu Jul 18 22:35:23 2019
+Fri Jul 19 01:42:22 2019
 Windows-8-6.2.9200
 Ren'Py 7.3.2.320
  
 
-Bootstrap to the start of init.init took 0.08s
+Bootstrap to the start of init.init took 0.09s
 Early init took 0.00s
-Loader init took 0.03s
-Loading error handling took 0.03s
-Loading script took 0.09s
+Loader init took 0.01s
+Loading error handling took 0.02s
+Loading script took 0.18s
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Running init code took 0.06s
-Loading analysis data took 0.04s
+Loading analysis data took 0.03s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Dump and make backups. took 0.08s
+Backing up script files to 'C:\\Users\\Heidi Chan\\AppData\\Roaming/RenPy/backups\\MutantGameDemo':
+Dump and make backups. took 0.10s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.01s
+Initial gc. took 0.02s
 DPI scale factor: 1.000000
-Creating interface object took 0.05s
+Creating interface object took 0.07s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.06s
 Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Save pyanalysis. took 0.06s
+Save bytecode. took 0.07s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.02s
@@ -441,11 +442,11 @@ Texture testing:
 - 2048px textures work.
 FBO Maximum Texture Size: 32768
 Root FBO is: 0
-Total time until interface ready: 1.31900000572s
+Total time until interface ready: 1.6210000515s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
 - Frame drawn at 0.019949 seconds.
 - Frame drawn at 0.020949 seconds.
 - Frame drawn at 0.030949 seconds.
-- Frame drawn at 0.048949 seconds.
-- 0.048949 seconds to render 5 frames.
+- Frame drawn at 0.047949 seconds.
+- 0.047949 seconds to render 5 frames.

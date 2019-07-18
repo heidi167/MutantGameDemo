@@ -16,6 +16,9 @@ image her2 = im.FactorScale("her2_label.png", 0.4)
 image myc = im.FactorScale("myc.png", 0.5)
 image points_text = ParameterizedText(xalign=0.98, yalign=0.02, line_spacing=1)
 image chapter_text = ParameterizedText(xalign=0.06, yalign=0.02)
+image pencil = im.FactorScale("pencil2.png", 0.45)
+image eraser = im.FactorScale("eraser.png", 0.6)
+image ruler = im.FactorScale("ruler.png", 0.45)
 #Characters
 define g = Character("GF Receptors", who_color="#874caa")
 
@@ -39,6 +42,18 @@ label ch1screen:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
+    show pencil:
+        rotate 5
+        xalign 1.1
+        yalign 0.2
+    show eraser:
+        rotate 15
+        xalign 1.0
+        yalign 0.8
+    show ruler:
+        rotate -7
+        xalign -0.25
+        yalign 0.4
     show sun:
         xalign 0.01
         yalign 0.01
@@ -281,7 +296,7 @@ label gfr:
 
 
 label q5:
-    "That was a strange occurrence indeed. Based off what you have learnt, which proto-oncogene do you think ha mutated?"
+    "That was a strange occurrence indeed. Based off what you have learnt, which proto-oncogene do you think has mutated?"
     $ q5_tried = False
 
 label q5menu:
