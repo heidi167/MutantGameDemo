@@ -19,6 +19,7 @@ image chapter_text = ParameterizedText(xalign=0.06, yalign=0.02)
 image pencil = im.FactorScale("pencil2.png", 0.45)
 image eraser = im.FactorScale("eraser.png", 0.6)
 image ruler = im.FactorScale("ruler.png", 0.45)
+image paperclip = im.FactorScale("paperclip.png", 0.5)
 #Characters
 define g = Character("GF Receptors", who_color="#874caa")
 
@@ -54,6 +55,9 @@ label ch1screen:
         rotate -7
         xalign -0.25
         yalign 0.4
+    show paperclip:
+        xalign 0.1
+        yalign 0.3
     show sun:
         xalign 0.01
         yalign 0.01
