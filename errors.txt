@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 234: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation.
+    "What kind of binding is it that signals this signalling pathway?"
+    ^
+
+Ren'Py Version: Ren'Py 7.3.2.320
+Thu Jul 18 21:17:08 2019
