@@ -4,7 +4,7 @@
 # name of the character.
 
 #Images
-image back = "back.png"
+image back = "backsmall.png"
 image fam_happy = im.FactorScale("fam_happy2.png", 0.5)
 image sun = im.FactorScale("sun.png", 0.05)
 image fam_mutate = im.FactorScale("fam_mutate.png", 0.5)
@@ -66,6 +66,11 @@ label ch1screen:
         xalign 0.83
         yalign 0.0
     show points_text "Points: [points] / [totalqs]"
+
+    play music "Coupe.mp3"
+
+
+
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
